@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>memorias</title>
+</head>
+<body>
+
+    <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+        <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">FECHAR</a> 
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">INICIO</a> 
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CRIAS</a> 
+      </nav>
+      <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+      </header>
+        <h1 class="titulo" >Memórias MORELLI
+        <img src="img/download (1).png" class="morelli"></h1>
+        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+       
+        <h1 >Inicio</h1>
+        <div class="gallery-container">
+            <a href="img/cobra.png" class="gallery-items">
+                <img src="img/cobra.png" alt="cobra">
+                <p>no passeio com uma cobra</p>
+            </a>
+            <a href="img/amigos.png" class="gallery-items">
+                <img src="img/amigos.png" alt="turma">
+                <p>eu e meus amigos</p>
+            </a>
+            <a href="img/wilso.png" class="gallery-items">
+                <img src="img/wilso.png" alt="wilson">
+                <p>eu e meu parceiro</p>
+            </a>
+            <a href="img/hoje.png" class="gallery-items">
+                <img src="img/hoje.png" alt="hoje">
+                <p>na sala do terceirão</p>
+            </a>
+            <div id="about">
+                <h4 class="subtitulos"><b>CRIAS
+                </b></h4>
+              <div class="w3-row w3-grayscale-min"> 
+                <div class="w3-quarter">
+               </div>
+                
+            <a href="img/sla (1).png" class="gallery-items">
+                <img src="img/sla (1).png" alt="eu">
+                <p>abra para ver melhor esses lindos</p>
+            </a>
+            <a href="img/pedro.png" class="gallery-items">
+                <img src="img/pedro.png" alt="amigos">
+                <p>2 beldades</p>
+            </a>
+            
+           
+             
+    </main>
+
+
+    <script>
+        // Script para abrir e fechar a barra lateral
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("myOverlay").style.display = "block";
+        }
+        
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("myOverlay").style.display = "none";
+        }
+        
+        // Galeria de imagens modais
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+        
+        
+        </script>
+        <div class="copyright">
+            Colégio Estadual Padre Claudio Morelli. Aluno: Bryan. Todos os direitos reservados.
+          </div>  
+</body>
+</html>
